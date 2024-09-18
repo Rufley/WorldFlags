@@ -28,7 +28,3 @@ export default ThumbDetails
 
 
 
-// <h3 className="font-bold mb-4">{title}</h3>
-// <p className="text-xs pb-2">Population: <span className="text-grey-700 dark:text-gray-300">{population.toLocaleString()}</span></p>
-// <p className="text-xs pb-2">Region: <span className="text-grey-700 dark:text-gray-300">{region}</span></p>
-// <p className="text-xs ">Capital: <span className="text-grey-700 dark:text-gray-300">{capital}</span></p>
