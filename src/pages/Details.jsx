@@ -30,8 +30,8 @@ const Details = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-800 dark:text-white">
-      <div className="shadow-md py-6 px-3 bg-white dark:bg-gray-700 dark:text-white mb-16">
-        <div className="flex container mx-auto">
+      <div className="shadow-md py-6 bg-white dark:bg-gray-700 dark:text-white">
+        <div className="flex container mx-auto px-4">
           <h1 className="font-bold text-xl">Where in the World</h1>
           <div className="ml-auto font-medium">
             <button onClick={darkModeHandler}>
@@ -40,16 +40,22 @@ const Details = () => {
           </div>
         </div>
       </div>
-      <section className="container flex mx-auto p-8 pl-0 pr-0"> 
+      
+        <div className='container mx-auto my-8 px-4'>
+      <Link to="/" className='bg-white p-2 rounded text-xs tracking-wide shadow dark:bg-gray-700 dark:text-gray-400 text-gray-700'> <ArrowBackIcon/> Back </Link>
+      </div>   
+              
+      <section className="container flex mx-auto  pl-0 pr-0"> 
        
         {country.map((country, index) => (
-          <div key={country.population} className="grid grid-cols-1 gap-8 md:grid-cols-2 md:place-items-center md:h-screen">
-            <article>
+          <div key={country.population} className=" px-4 grid grid-cols-1 gap-8 md:grid-cols-2  md:place-items-center ">         
             
-              <img src={country.flags.svg} alt={country.name.common} />
+            <article className='w-full'>
+            
+              <img src={country.flags.svg} alt={country.name.common}  />
             </article>
             <article>
-              <h1 className="mb-8 font-bold text-gray-900 text-4xl lg:text-6xl dark:text-white">{country.name.official}</h1>
+              <h1 className="mb-8 font-bold text-gray-900 text-4xl xl:text-6xl dark:text-white">{country.name.official}</h1>
               <ul className="my-4 flex flex-col items-start justify-start gap-2 text-slate-700 dark:text-gray-400">
                 <li>Capital: {country.capital[0]}</li>
                 <li>Population: {country.population.toLocaleString()}</li>
@@ -70,15 +76,21 @@ const Details = () => {
                   </ul>
                 </>
               )}
-              <div className="mt-10 ">
-                <Link to="/" className='bg-white p-2 rounded text-xs tracking-wide shadow dark:bg-gray-700 dark:text-gray-400 text-gray-700'> <ArrowBackIcon/> Back </Link>
-              </div>
+              
             </article>
           </div>
         ))}
       </section>
-    </div>
+      </div>
+    
   );
 };
 
 export default Details;
+
+
+
+// fixa rad 46 
+
+
+

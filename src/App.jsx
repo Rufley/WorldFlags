@@ -8,7 +8,7 @@ import Error from './pages/Error'
 function App() {
 
   return (
-    <div className="header">
+    <div className="header" class="w-100%">
      <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
