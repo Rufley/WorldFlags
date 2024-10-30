@@ -55,8 +55,8 @@ const Details = () => {
               <img src={country.flags.svg} alt={country.name.common}  />
             </article>
             <article>
-              <h1 className="mb-8 font-bold text-gray-900 text-4xl xl:text-6xl dark:text-white">{country.name.official}</h1>
-              <ul className="my-4 flex flex-col items-start justify-start gap-2 text-slate-700 dark:text-gray-400">
+              <h1 className="mb-8 font-bold text-gray-900 text-4xl xl:text-6xl dark:text-white text-center md:text-left">{country.name.official}</h1>
+              <ul className="my-4 flex flex-col items-center md:items-start justify-start gap-2 text-slate-700 dark:text-gray-400">
                 <li>Capital: {country.capital[0]}</li>
                 <li>Population: {country.population.toLocaleString()}</li>
                 <li>Region: {country.region}</li>
@@ -64,14 +64,20 @@ const Details = () => {
               </ul>
               {country.borders && (
                 <>
-                  <h3 className="text-gray-900 font-bold text-lg mb-2 dark:text-white">Borders:</h3>
-                  <ul className="flex flex-wrap items-start justify-start gap-2">
+                  <h3 className="text-gray-900 font-bold text-lg mb-2 dark:text-white text-center md:text-left">Borders:</h3>
+                  <ul className="flex flex-wrap items-center justify-center gap-2  md:justify-start">
                     {country.borders.map((border, index) => (
-                      <li  key={index} className="bg-white p-2 rounded text-xs tracking-wide shadow dark:bg-gray-700 dark:text-gray-400 text-gray-700">
-                        <Link to={`/${border}`} key={index}>
-                          {border}
-                        </Link>
-                      </li>
+                      <li
+                      key={index}
+                      className="bg-white p-2 rounded text-xs tracking-wide shadow dark:bg-gray-700 dark:text-gray-400 text-gray-700 flex items-center justify-center sm:justify-center md:justify-start"
+                    >
+                      <Link to={`/${border}`} key={index}>
+                        {border}
+                      </Link>
+                    </li>
+                      
+                    
+                     
                     ))}
                   </ul>
                 </>
@@ -94,3 +100,14 @@ export default Details;
 
 
 
+
+
+
+
+{/* <li  key={index} className="bg-white p-2 rounded text-xs tracking-wide shadow dark:bg-gray-700 dark:text-gray-400 text-gray-700">
+                        
+<Link to={`/${border}`} key={index}>
+  {border}
+</Link>
+
+</li> */}
