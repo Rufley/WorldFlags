@@ -355,7 +355,7 @@ const Home = () => {
 
     return (
         <div className="h-screen bg-gray-100 dark:bg-gray-800 dark:text-white">
-            <div className="shadow-md py-6  bg-white dark:bg-gray-700 dark:text-white mb-16">
+            <div className="shadow-md py-6 px-10 bg-white dark:bg-gray-700 dark:text-white mb-16">
                 <div className="flex container mx-auto px-10">
                     <h1 className="font-bold text-xl">Where in the World</h1>
                     <div className="ml-auto font-medium">
